@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D;
+using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Movement : MonoBehaviour
     private float width;
     private float height;
     public float Speed;
+    public float move;
+    public bool jump;
 
     public void Start()
     {
@@ -23,11 +26,12 @@ public class Movement : MonoBehaviour
     }
     void Update()
     {
-        if(Input.GetKey("c"))
+    /*
+        if(Input.GetKey("a"))
         {
             horizontalMove = 1f*Speed;
         }
-        if (Input.GetKey("z"))
+        if (Input.GetKey("d"))
         {
             horizontalMove = -1f * Speed;
         }
@@ -52,12 +56,24 @@ public class Movement : MonoBehaviour
                   
                 }
             
-        }
+        }*/
+    
     }
     private void FixedUpdate()
     {
-        controller.Move(horizontalMove * Time.fixedDeltaTime, false,false);
-        horizontalMove = 0f;
+        controller.Move(horizontalMove * Time.fixedDeltaTime, false,jump);
+        jump = false;
+       // horizontalMove = 0f;
+    }
+    public void Move(InputAction.CallbackContext context)
+    {
+        move = context.ReadValue<Vector2>().x;
+        horizontalMove = move * Speed;
+    }
+
+    public void Jump()
+    {
+        jump = true;
     }
   
 }
