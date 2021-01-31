@@ -20,6 +20,7 @@ public class ButtonScript : MonoBehaviour
 
     public Button Button;
     public string URL;
+    public float Button_cool;
     public void Awake()
     {
     }
@@ -46,9 +47,12 @@ public class ButtonScript : MonoBehaviour
     {
         if (context.performed)
         {
-            if (Button.interactable)
+            if (Button.interactable && Button_cool<=0)
             {
                 TaskOnClick();
+                Button_cool = 2;
+                Button.interactable = false;
+                Debug.Log("pressed");
             }
         }
     }
@@ -58,6 +62,14 @@ public class ButtonScript : MonoBehaviour
         Debug.Log("open");
          openIt(URL);
         
+    }
+
+    public void Update()
+    {
+        if(Button_cool > 0)
+        {
+            Button_cool -= Time.deltaTime;
+        }
     }
 
 
