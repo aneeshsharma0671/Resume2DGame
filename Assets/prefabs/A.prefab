@@ -223,6 +223,7 @@ MonoBehaviour:
   m_OptimizeGeometry: 1
   m_EnableTangents: 0
   m_GeometryCached: 0
+  m_UTess2D: 0
 --- !u!60 &3672310211490058813
 PolygonCollider2D:
   m_ObjectHideFlags: 0

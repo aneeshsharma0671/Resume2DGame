@@ -152,6 +152,7 @@ MonoBehaviour:
   m_OptimizeGeometry: 1
   m_EnableTangents: 0
   m_GeometryCached: 0
+  m_UTess2D: 0
 --- !u!114 &6662727973809924572
 MonoBehaviour:
   m_ObjectHideFlags: 0
