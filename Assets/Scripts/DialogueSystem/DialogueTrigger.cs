@@ -6,8 +6,12 @@ public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
 
-    public void TriggerDialogue()
+    public virtual void TriggerDialogue()
     {
-        DialogueManager.instance.StartDialogue(dialogue);
+        DialogueManager.instance.StartDialogue(dialogue,this);
+    }
+
+    public virtual void OnEndConversation()
+    {
     }
 }

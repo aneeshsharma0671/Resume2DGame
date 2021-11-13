@@ -154,6 +154,17 @@
                 },
                 {
                     "name": "",
+                    "id": "2cfd1b07-9ec2-4120-bed9-78b4f43003ad",
+                    "path": "<XInputController>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "7db327d6-574e-4270-9aae-61bc4a5fd5ee",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -165,11 +176,55 @@
                 },
                 {
                     "name": "",
+                    "id": "0789b25e-676e-4f78-9b9b-f62e606cb405",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aac522b7-2b5a-4e67-b06f-54110681bb8e",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "11a74f04-4ca9-4cca-ae51-96dd59c4cd4e",
                     "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "868a464a-2734-4786-a485-f41859314424",
+                    "path": "<XInputController>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Gamepad",
+                    "action": "Action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "693a77c7-fdc0-4446-850d-e76b2f8aecf8",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
                     "action": "Action",
                     "isComposite": false,
                     "isPartOfComposite": false

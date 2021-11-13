@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     public TMP_Text NPCName;
     public TMP_Text dialogueText;
     public Animator anim;
+    DialogueTrigger triggerInstance;
 
     public Queue<string> sentences;
 
@@ -30,8 +31,9 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-    public void StartDialogue(Dialogue dialogue)
+    public void StartDialogue(Dialogue dialogue , DialogueTrigger _triggerinstance)
     {
+        triggerInstance = _triggerinstance;
         Debug.Log("Starting Convo with" + dialogue.name);
 
         anim.SetBool("Is_Open", true);
@@ -77,5 +79,7 @@ public class DialogueManager : MonoBehaviour
     {
         Debug.Log("End Convo");
         anim.SetBool("Is_Open", false);
+        triggerInstance.OnEndConversation();
+
     }
 }
