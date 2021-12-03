@@ -13,6 +13,9 @@ public class Movement : MonoBehaviour
     public float move;
     public bool jump;
     public bool ActionIsPressed;
+    public float horizontalVelocity;
+    public float verticalVelocity;
+    Rigidbody2D rb;
 
     public bool canMove = false;
     public bool canJump;
@@ -27,8 +30,17 @@ public class Movement : MonoBehaviour
             instance = this;
         }
     }
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
     void Update()
-    {    
+    {
+        // getting vaules
+        horizontalVelocity = rb.velocity.x;
+        verticalVelocity = rb.velocity.y;
+        
     }
     private void FixedUpdate()
     {

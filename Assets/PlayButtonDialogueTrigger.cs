@@ -16,5 +16,6 @@ public class PlayButtonDialogueTrigger : DialogueTrigger
         Debug.Log("Start Movenment");
         Debug.Log(" Convo EnD");
         Movement.instance.canMove = true;
+        Destroy(gameObject);
     }
 }
